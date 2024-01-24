@@ -1,20 +1,3 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
 
   /**
@@ -33,14 +16,14 @@
     hsla(240, 1%, 18%, 0.251) 0%, 
     hsla(240, 2%, 11%, 0) 100%
   ), hsl(240, 2%, 13%);
-  --bg-gradient-yellow-1: linear-gradient(
+  --bg-gradient-lilac-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
+    #e1c4ff 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
-  --bg-gradient-yellow-2: linear-gradient(
+  --bg-gradient-lilac-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
+    #e7d1ff 0%, 
     hsla(35, 100%, 68%, 0) 59.86%
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
@@ -48,10 +31,10 @@
     hsl(0, 0%, 25%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
-  --text-gradient-yellow: linear-gradient(
+  --text-gradient-lilac: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    #d8b9ff, 
+    #d2afff
   );
 
   /* solid */
@@ -63,8 +46,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --lilac: #CF9FFF;
+  --lilac-light: #d8b9ff;
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -74,12 +57,12 @@
    */
 
   /* font-family */
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-lora: 'Lora', sans-serif;
 
   /* font-size */
-  --fs-1: 24px;
-  --fs-2: 18px;
-  --fs-3: 17px;
+  --fs-1: 25px;
+  --fs-2: 20px;
+  --fs-3: 18px;
   --fs-4: 16px;
   --fs-5: 15px;
   --fs-6: 14px;
@@ -147,13 +130,13 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
+  background: var(--lilac);
   color: var(--smoky-black);
 }
 
-:focus { outline-color: var(--orange-yellow-crayola); }
+:focus { outline-color: var(--lilac); }
 
-html { font-family: var(--ff-poppins); }
+html { font-family: var(--ff-lora); }
 
 body { background: var(--smoky-black); }
 
@@ -167,19 +150,18 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
+  background: var(--eerie-black-1);
+  border: 1px solid var(--lilac);
   border-radius: 20px;
   padding: 15px;
-  box-shadow: var(--shadow-1);
-  z-index: 1;
+  box-shadow: var(--lilac);
+  z-index: -2;
 }
 
 .separator {
   width: 100%;
   height: 1px;
-  background: var(--jet);
-  margin: 16px 0;
+  background: var(--lilac);
 }
 
 .icon-box {
@@ -187,14 +169,13 @@ article {
   background: var(--border-gradient-onyx);
   width: 30px;
   height: 30px;
-  border-radius: 8px;
+  border: 1px solid var(--lilac-light);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--orange-yellow-crayola);
-  box-shadow: var(--shadow-1);
-  z-index: 1;
+  color: var(--lilac);
+  z-index: 2;
 }
 
 .icon-box::before {
@@ -251,7 +232,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-lilac);
   border-radius: 3px;
 }
 
@@ -266,7 +247,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: var(--lilac);
   border-radius: 5px;
 }
 
@@ -334,6 +315,7 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  border: 1px solid var(--lilac);
 }
 
 .info-content .name {
@@ -360,7 +342,7 @@ main {
   right: -15px;
   border-radius: 0 15px;
   font-size: 13px;
-  color: var(--orange-yellow-crayola);
+  color: var(--lilac);
   background: var(--border-gradient-onyx);
   padding: 10px;
   box-shadow: var(--shadow-2);
@@ -485,7 +467,7 @@ main {
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active { color: var(--lilac); }
 
 
 
@@ -796,7 +778,7 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--lilac-light);
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
@@ -818,7 +800,7 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-lilac);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -862,7 +844,7 @@ main {
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-lilac);
   height: 100%;
   border-radius: inherit;
 }
@@ -980,7 +962,7 @@ main {
   --scale: 0.8;
 
   background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--lilac);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1105,7 +1087,7 @@ main {
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+.blog-post-item > a:hover .blog-item-title { color: var(--lilac); }
 
 .blog-text {
   color: var(--light-gray);
@@ -1164,7 +1146,7 @@ main {
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
-.form-input:focus { border-color: var(--orange-yellow-crayola); }
+.form-input:focus { border-color: var(--lilac); }
 
 textarea.form-input {
   min-height: 100px;
@@ -1182,7 +1164,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--lilac);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1620,7 +1602,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button:hover { color: var(--light-gray-70); }
 
-  .filter-item button.active { color: var(--orange-yellow-crayola); }
+  .filter-item button.active { color: var(--lilac); }
 
   /* portfolio and blog grid */
 
@@ -1775,7 +1757,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   body::-webkit-scrollbar-track { background: var(--smoky-black); }
 
   body::-webkit-scrollbar-thumb {
-    border: 5px solid var(--smoky-black);
+    border: 1px solid var(--lilac);
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 20px;
     box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
